@@ -40,4 +40,8 @@ export class FirstComponent implements OnInit {
   oNclick($e){
     alert(this.profile.address);
   }
+  getComment(){
+    return this.profile.comment;
+  }
+  
 }

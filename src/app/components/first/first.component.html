@@ -1,10 +1,10 @@
 <div class="card">
-    
+
     <div class="card-body">
         <h4 class="card-title">1st: Profile</h4>
         <div class="row">
             <div class="col-md-2">
-                <img src="" class="image"  alt="Your Image">{{profile.img}}
+                <img [src]="profile.img" class="img-thumbnail" alt="Your Image">
             </div>
             <div class="col-md-10">
                 <div class="card">
@@ -13,70 +13,66 @@
                     </div>
                     <div class="card-body">
                         <div class="row" style="padding: 5px;">
-                            <div class="col-lg-6"><i class="fa fa-id-card" aria-hidden="true"></i> Student ID: {{profile.studentid}}</div>
-                            <div class="col-lg-6 text-left">
-
-                            </div>
-                        </div>
-                        <div class="row" style="padding: 5px;">
-                            <div class="col-lg-12"><i class="fa fa-user-circle" aria-hidden="true"></i> Name:{{profile.name}}</div>
+                            <div class="col-lg-2"><i class="fa fa-id-card" aria-hidden="true"></i> Student ID: </div>
                             <div class="col-lg-10 text-left">
-
+                              {{profile.studentid}}
                             </div>
                         </div>
                         <div class="row" style="padding: 5px;">
-                            <div class="col-lg-12"><i class="fa fa-venus-mars" aria-hidden="true"></i> Gender:{{profile.gender}}</div>
+                            <div class="col-lg-2"><i class="fa fa-user-circle" aria-hidden="true"></i> Name: </div>
                             <div class="col-lg-10 text-left">
-
+                              {{profile.name}}
                             </div>
                         </div>
                         <div class="row" style="padding: 5px;">
-                            <div class="col-lg-12"><i class="fa fa-birthday-cake" aria-hidden="true"></i> Birth Year:{{profile.birthyear}}</div>
+                            <div class="col-lg-2"><i class="fa fa-venus-mars" aria-hidden="true"></i> Gender: </div>
                             <div class="col-lg-10 text-left">
-
+                              {{profile.gender}}
                             </div>
                         </div>
                         <div class="row" style="padding: 5px;">
-                            <div class="col-lg-12"><i class="fa fa-birthday-cake" aria-hidden="true"></i> Age:{{2020-profile.birthyear}}</div>
+                            <div class="col-lg-2"><i class="fa fa-birthday-cake" aria-hidden="true"></i> Birth Year: </div>
                             <div class="col-lg-10 text-left">
-
+                              {{profile.birthyear}}
                             </div>
                         </div>
                         <div class="row" style="padding: 5px;">
-                            <div class="col-lg-12"><i class="fa fa-at" aria-hidden="true"></i> Email:{{profile.email}}</div>
+                            <div class="col-lg-2"><i class="fa fa-birthday-cake" aria-hidden="true"></i> Age: </div>
+                            <div class="col-lg-10 text-left">
+                              {{2020-profile.birthyear}}
+                            </div>
+                        </div>
+                        <div class="row" style="padding: 5px;">
+                            <div class="col-lg-2"><i class="fa fa-at" aria-hidden="true"></i> Email: </div>
                             <div class="col-sm-10 text-left">
-
+                                {{profile.email}}
                             </div>
                         </div>
                         <div class="row" style="padding: 5px;">
-                            <div class="col-lg-12"><i class="fa fa-phone" aria-hidden="true"></i> Phone:{{profile.phone}}</div>
+                            <div class="col-lg-2"><i class="fa fa-phone" aria-hidden="true"></i> Phone: </div>
                             <div class="col-lg-10 text-left">
-                                
+                              {{profile.phone}}
                             </div>
                         </div>
                         <div class="row" style="padding: 5px;">
-                            <div class="col-lg-12"><i class="fa fa-address-book" aria-hidden="true"></i> Address:
-                                <button type="button" class="btn btn-primary" (click) ="oNclick($event)" >Show Address</button></div>
+                            <div class="col-lg-2"><i class="fa fa-address-book" aria-hidden="true"></i> Address: </div>
                             <div class="col-lg-10 text-left">
-                                
+                              <button _ngcontent-iya-c47="" type="button" (click)="oNclick($event)" class="btn btn-info btn-sm">Show Address</button>
                             </div>
                         </div>
                         <div class="row" style="padding: 5px;">
-                            <div class="col-lg-60"><i class="fa fa-address-book" aria-hidden="true"></i> Comment:</div>
+                            <div class="col-lg-2"><i class="fa fa-address-book" aria-hidden="true"></i> Comment: </div>
                             <div class="col-lg-10 text-left">
-                                
+                              <textarea _ngcontent-iya-c47="" rows="5" [(ngModel)]="profile.comment" class="form-control"></textarea>
+                              <label _ngcontent-iya-c47="" for="comment">Your comment: {{getComment()}}</label>
                             </div>
-                        </div>
-                        <div class="from-group">
-                            <textarea  class="form-control" id="comment"></textarea>
-                            <label for="comment">Comment: {{profile.comment}}</label>
                         </div>
 
-                        
+
 
                     </div>
                 </div>
-                
+
             </div>
         </div>
     </div>
